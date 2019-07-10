@@ -15,7 +15,7 @@ class PassWord(Resource):
         global passwords
         return {
             "result": "OK",
-            "passwords": passwords
+            "passwords": list(passwords)
         }
 
     def post(self):
