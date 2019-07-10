@@ -11,6 +11,13 @@ passwords = set()
 
 
 class PassWord(Resource):
+    def get(self):
+        global passwords
+        return {
+            "result": "OK",
+            "passwords": passwords
+        }
+
     def post(self):
         global door, passwords
         user_input = request.form['data']
